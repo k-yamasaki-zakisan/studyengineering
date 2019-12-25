@@ -29,7 +29,7 @@ class RecordsController < ApplicationController
           @client.update("タイトル：#{@record.title}\n内容：#{@record.body}\n学習時間：#{@record.studytime} h\n総計：#{@record.until_today_studytime} h")
           render :newpost
         else
-          flash[:miss_add_record] = "学習項目と期限を入力してください"
+          flash[:miss_add_record] = "学習項目と学習時間を入力してください"
           render :message
         end
       #本日2回連続投稿の失敗処理を入れる

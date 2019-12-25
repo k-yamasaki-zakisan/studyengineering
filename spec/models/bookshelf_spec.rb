@@ -13,13 +13,13 @@ RSpec.describe Bookshelf, type: :model do
       	expect(book).to be_valid
         book.save
 
-        bookshelf = FactoryBot.build(:bookshelf)
+        bookshelf = FactoryBot.build(:bookshelf, user_id: user.id, book_id: book.id)
       	expect(bookshelf).to be_valid
         bookshelf.save
 
-        answered_bookshelf = Bookshelf.find(1);
-        expect(answered_bookshelf.user_id).to eq(1)
-        expect(answered_bookshelf.book_id).to eq(1)
+        answered_bookshelf = Bookshelf.find_by(user_id: user.id);
+        expect(answered_bookshelf.user_id).to eq(user.id)
+        expect(answered_bookshelf.book_id).to eq(book.id)
       end
     end
   end

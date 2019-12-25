@@ -13,13 +13,13 @@ RSpec.describe Recommended, type: :model do
       	expect(book).to be_valid
         book.save
 
-        recommended = FactoryBot.build(:recommended)
+        recommended = FactoryBot.build(:recommended, user_id: user.id, book_id: book.id)
       	expect(recommended).to be_valid
         recommended.save
 
-        answered_recommended = Recommended.find(1);
-        expect(answered_recommended.user_id).to eq(1)
-        expect(answered_recommended.book_id).to eq(1)
+        answered_recommended = Recommended.find_by(user_id: user.id);
+        expect(answered_recommended.user_id).to eq(user.id)
+        expect(answered_recommended.book_id).to eq(book.id)
       end
     end
   end

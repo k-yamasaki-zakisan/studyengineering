@@ -2,10 +2,10 @@ class BookshelvesController < ApplicationController
 	before_action :authenticate_user!
 
 	def create
-	  book = Book.find_or_initialize_by(book_code: bookcode_params[:book_code])
+	  book = Book.find_or_initialize_by(book_code: params[:book_code])
 
 	  if book.new_record?
-        results = RakutenWebService::Books::Book.search(isbn: bookcode_params[:book_code])
+        results = RakutenWebService::Books::Book.search(isbn: params[:book_code])
 	    book = Book.new(read(results.first))
 	    book.save
 	  end
@@ -33,10 +33,6 @@ class BookshelvesController < ApplicationController
 	end
 
 	private
-
-	def bookcode_params
-      params.permit(:book_code)
-    end
 
     def bookshelf_update_params
 	  params.require(:bookshelf).permit(:status)
