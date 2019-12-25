@@ -22,7 +22,7 @@ class BookshelvesController < ApplicationController
 	  bookshelf = current_user.bookshelves.find(params[:id])
 	  if bookshelf.update(bookshelf_update_params)
 	    flash[:success_update]  = "「#{bookshelf.book.title}」のステータスを更新しました"
-		redirect_back(fallback_location: root_path)
+		redirect_to user_path(current_user.id)
 	  end
 	end
 

@@ -4,47 +4,61 @@ RSpec.describe RecommendedsController, type: :controller do
   describe '正常系' do
   	context 'ユーザーログインしてるとき' do
       before do
-        login_user
+        @user = FactoryBot.create(:user)
+        @book = FactoryBot.create(:book)
+        sign_in @user
       end
 
-	  it '#create：本をお勧めする' do
-          book = FactoryBot.build(:book)
-          book.save
-	      post :create, params: {book_id: book.id}, xhr: true
+	    it '#create：本をお勧めできる' do
+        post :create, params: { user_id: @user.id, book_id: @book.id }, xhr: true
+        expect(response).to have_http_status(200)
       end
 
-      # it '#destroy：本のお勧めの解除する' do
-      #     book = FactoryBot.build(:book)
-      #     book.save
-      #     recommended = FactoryBot.create(:recommended, book_id: book.id)
-	     #  delete :destroy, params: {id: recommended.id}, xhr: true
-      # end
-
-      # it '#destroy：本棚から本の削除' do
-      #   book = FactoryBot.create(:book)
-      #   bookshelf = FactoryBot.create(:bookshelf,  book_id: book.id)
-      #   delete :destroy, params: {id: bookshelf.id}
-      #   expect(response).to have_http_status(200)
-      # end
+      it '#destroy：本のお勧めの解除できる' do
+        recommended = FactoryBot.create(:recommended, user_id: @user.id, book_id: @book.id)
+        delete :destroy, params: {id: recommended.id}, xhr: true
+        expect(response).to have_http_status(200)
+      end
     end
   end
 
   describe '異常系' do
     context 'ユーザーログインしていないとき' do
+      before do
+        @user = FactoryBot.create(:user)
+        @book = FactoryBot.create(:book)
+        @recommended = FactoryBot.create(:recommended, user_id: @user.id, book_id: @book.id)
+      end
 
-     #  it '#create：本棚に本の取得できない' do
-     #    bookshelf = Bookshelf.create
-     #    params = '9784295005902'
-     #    book = Book.new(book_code: params)
-	    # bookshelf.book_id = book.id
-	    # bookshelf.save
-	    # expect(response).to have_http_status(200)
-     #  end
+      it '#create：本棚に本の取得できない' do
+        post :create, params: {user_id: @user.id, book_id: @book.id}
+        expect(response).to redirect_to(new_user_session_path)
+      end
 
-      # it '#destroy：本棚から本の削除' do
-      #   book = FactoryBot.create(:book)
-      #   bookshelf = FactoryBot.create(:bookshelf,  book_id: book.id)
-      #   delete :destroy, params: {id: bookshelf.id}
+      it '#destroy：本棚から本の削除できない' do
+        delete :destroy, params: { id: @recommended.id }
+        expect(response).to redirect_to(new_user_session_path)
+      end
+    end
+
+    context 'ユーザーログイン時に他のユーザーの投稿を操作しようとする' do
+      before do
+        @user = FactoryBot.create(:user)
+        @book = FactoryBot.create(:book)
+        @recommended = FactoryBot.create(:recommended, user_id: @user.id, book_id: @book.id)
+        @new_user = User.new(
+          name: '田中',
+          email: 'tett@test.com',
+          password: '111111',
+        )
+        @new_user.save
+        sign_in @new_user
+      end
+
+      # it '#create：本棚に本の取得できない' do
+      # end
+
+      # it '#destroy：本棚から本の削除できない' do
       # end
     end
   end
