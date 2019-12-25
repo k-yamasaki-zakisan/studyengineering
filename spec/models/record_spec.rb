@@ -9,12 +9,12 @@ RSpec.describe Record, type: :model do
       	expect(user).to be_valid
         user.save
 
-        record = FactoryBot.build(:record)
+        record = FactoryBot.build(:record, user_id: user.id)
       	expect(record).to be_valid
         record.save
 
-        answered_record = Record.find(1);
-        expect(answered_record.user_id).to eq(1)
+        answered_record = Record.find_by(user_id: user.id);
+        expect(answered_record.user_id).to eq(user.id)
         expect(answered_record.title).to eq('Udmeyの動画視聴')
         expect(answered_record.body).to eq('JSを勉強する')
         expect(answered_record.studytime).to eq(11)

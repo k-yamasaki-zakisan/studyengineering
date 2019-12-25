@@ -9,12 +9,12 @@ RSpec.describe Todolist, type: :model do
       	expect(user).to be_valid
         user.save
 
-        todolist = FactoryBot.build(:todolist)
+        todolist = FactoryBot.build(:todolist, user_id: user.id)
       	expect(todolist).to be_valid
         todolist.save
 
-        answered_todolist = Todolist.find(1);
-        expect(answered_todolist.user_id).to eq(1)
+        answered_todolist = Todolist.find_by(user_id: user.id);
+        expect(answered_todolist.user_id).to eq(user.id)
         expect(answered_todolist.body).to eq('テストコードを10個書く')
         expect(answered_todolist.status).to eq("challenge")
       end

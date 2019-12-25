@@ -8,16 +8,16 @@ class BooksController < ApplicationController
       end
     end
 
-  	def show
-      @book = Book.find(params[:id])
-  	end
-
   	def detail
   	  results = RakutenWebService::Books::Book.search({
         isbn: bookcode_params[:book_code]
       })
       @book = Book.new(read(results.first))
   	end
+
+    def show
+      @book = Book.find(params[:id])
+    end
 
     private
 

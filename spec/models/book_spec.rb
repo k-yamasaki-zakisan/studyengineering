@@ -9,7 +9,7 @@ RSpec.describe Book, type: :model do
       	expect(book).to be_valid
         book.save
 
-        answered_book = Book.find(1);
+        answered_book = Book.find_by(id: book.id);
         expect(answered_book.title).to eq('スラスラ読めるRubyふりがなプログラミング')
         expect(answered_book.url).to eq('https://books.rakuten.co.jp/rb/15819130/')
         expect(answered_book.book_code).to eq('9784295005902')

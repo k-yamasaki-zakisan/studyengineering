@@ -9,7 +9,7 @@ RSpec.describe User, type: :model do
       	expect(user).to be_valid
         user.save
 
-        answered_user = User.find(1);
+        answered_user = User.find_by(id: user.id);
         expect(answered_user.name).to eq('田中')
         expect(answered_user.email).to eq('t@test.com')
       end
