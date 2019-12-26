@@ -25,7 +25,6 @@ RSpec.describe UsersController, type: :controller do
       end
 
       it '#destroy：削除できる' do
-        delete :destroy, params: { id: @user.id }
         expect {
           delete :destroy, params: {id: @user.id}
         }.to change(User, :count).by(-1)
