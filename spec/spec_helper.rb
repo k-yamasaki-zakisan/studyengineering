@@ -12,9 +12,13 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
-require 'simplecov'
-require 'coveralls'
-Coveralls.wear!
+if ENV['CI']
+  require 'simplecov'
+  require 'coveralls'
+  Coveralls.wear!
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[Coveralls::SimpleCov::Formatter]
+  SimpleCov.start 'test_frameworks'
+end
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   ENV['RAILS_ENV'] = 'test'
