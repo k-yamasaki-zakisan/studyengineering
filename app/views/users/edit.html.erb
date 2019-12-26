@@ -10,7 +10,7 @@
           <%= u.text_field :email, class: 'form-control', placeholder: "メールアドレスを入力" %>
           <div class="edit-todo-create">
             <%= u.submit '編集を確定する', class: "btn btn-success", style: "width: 150px;" %>
-            <%= link_to "退会する", user_path(@user.id), class:"btn btn-danger destroy pull-right", method: :delete, "data-confirm" => "本当に削除しますか？？" %>
+            <%= link_to "退会する", user_path(@user.id), class:"btn btn-danger destroy pull-right", method: :delete, "data-confirm" => "本当に退会しますか？？" %>
           </div>
         <% end %>
     	</div>

@@ -30,13 +30,16 @@ RSpec.describe RecommendedsController, type: :controller do
         @recommended = FactoryBot.create(:recommended, user_id: @user.id, book_id: @book.id)
       end
 
-      it '#create：本棚に本の取得できない' do
+      it '#create：本をお勧めできない' do
         post :create, params: {user_id: @user.id, book_id: @book.id}
         expect(response).to redirect_to(new_user_session_path)
       end
 
-      it '#destroy：本棚から本の削除できない' do
+      it '#destroy：本のお勧めの解除できない' do
         delete :destroy, params: { id: @recommended.id }
+        expect {
+          delete :destroy, params: { id: @recommended.id }
+           }.to_not change(Recommended, :count)
         expect(response).to redirect_to(new_user_session_path)
       end
     end

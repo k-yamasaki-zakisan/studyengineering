@@ -91,9 +91,11 @@ RSpec.describe TodolistsController, type: :controller do
 
       it '#destroy：todoの削除ができない' do
         delete :destroy, params: { id: @todolist.id }
+        expect {
+          delete :destroy, params: { id: @todolist.id }
+        }.to_not change(Todolist, :count)
         expect(response).to redirect_to(new_user_session_path)
       end
-
     end
 
     context "ユーザーログイン時に他のユーザーの投稿を操作しようとする" do

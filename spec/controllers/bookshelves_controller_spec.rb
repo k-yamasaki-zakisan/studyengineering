@@ -58,6 +58,9 @@ RSpec.describe BookshelvesController, type: :controller do
 
       it '#destroy：本棚から本の削除できない' do
         delete :destroy, params: { id: @bookshelf.id }
+        expect {
+          delete :destroy, params: { id: @bookshelf.id }
+           }.to_not change(Bookshelf, :count)
         expect(response).to redirect_to(new_user_session_path)
       end
     end
