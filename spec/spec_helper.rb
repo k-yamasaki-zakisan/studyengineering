@@ -43,10 +43,8 @@ RSpec.configure do |config|
   # inherited by the metadata hash of host groups and examples, rather than
   # triggering implicit auto-inclusion in groups with matching metadata.
   config.shared_context_metadata_behavior = :apply_to_host_groups
-  if ENV['CIRCLE_ARTIFACTS']
     dir = File.join(ENV['CIRCLE_ARTIFACTS'], 'coverage')
     SimpleCov.coverage_dir(dir)
-  end
 
   require 'simplecov'
   SimpleCov.start
