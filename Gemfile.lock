@@ -76,6 +76,10 @@ GEM
       xpath (~> 3.2)
     chartkick (3.3.0)
     childprocess (3.0.0)
+    codecov (0.1.16)
+      json
+      simplecov
+      url
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -338,6 +342,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)
+    url (0.3.2)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (3.7.0)
@@ -364,6 +369,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   chartkick
+  codecov
   coffee-rails (~> 4.2)
   data-confirm-modal
   devise
