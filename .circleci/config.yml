@@ -1,0 +1,21 @@
+version: 2.1
+orbs:
+  codecov: codecov/codecov@1.0.5
+
+# 〜 省略 〜
+      - run:
+          name: RSpec を並列実行
+          command: |
+            bundle exec rspec --profile 10 \
+                              --format RspecJunitFormatter \
+                              --out test_results/rspec.xml \
+                              --format progress \
+                              $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+      - store_test_results:
+          path: test_results
+      - codecov/upload: # 追加
+          file: test_results/rspec.xml
+
+# 〜 省略 〜
+workflows:
+  version: 2.1
