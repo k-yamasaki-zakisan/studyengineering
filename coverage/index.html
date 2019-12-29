@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-12-26T06:01:29+00:00">2019-12-26T06:01:29+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-12-26T23:17:01+00:00">2019-12-26T23:17:01+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">91.96%</span></span>
+    (<span class="covered_percent"><span class="green">92.63%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.54
+         1.58
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>74</b> files in total.
-    <b>1045</b> relevant lines. 
-    <span class="green"><b>961</b> lines covered</span> and
-    <span class="red"><b>84</b> lines missed </span>
+    <b>1059</b> relevant lines. 
+    <span class="green"><b>981</b> lines covered</span> and
+    <span class="red"><b>78</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -87,7 +87,7 @@
         <td>16</td>
         <td>16</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.6</td>
       </tr>
       
       <tr>
@@ -482,28 +482,28 @@
       
       <tr>
         <td class="strong"><a href="#939c4cedabeb011d0c8e3e754fa5c7e2e50c846c" class="src_link" title="spec/controllers/bookshelves_controller_spec.rb">spec/controllers/bookshelves_controller_spec.rb</a></td>
-        <td class="yellow strong">87.23 %</td>
+        <td class="yellow strong">88.89 %</td>
         <td>91</td>
-        <td>47</td>
-        <td>41</td>
+        <td>54</td>
+        <td>48</td>
         <td>6</td>
         <td>1.1</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#44db18625f5688b5050abfe14eee302b75a82f6c" class="src_link" title="spec/controllers/recommendeds_controller_spec.rb">spec/controllers/recommendeds_controller_spec.rb</a></td>
-        <td class="yellow strong">83.78 %</td>
-        <td>69</td>
-        <td>37</td>
-        <td>31</td>
-        <td>6</td>
-        <td>1.0</td>
+        <td class="green strong">100.0 %</td>
+        <td>84</td>
+        <td>44</td>
+        <td>44</td>
+        <td>0</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#e14870820ae6e4d90e874e4d6d58b9cd5bc6ec6d" class="src_link" title="spec/controllers/records_controller_spec.rb">spec/controllers/records_controller_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>99</td>
+        <td>96</td>
         <td>55</td>
         <td>55</td>
         <td>0</td>
@@ -513,7 +513,7 @@
       <tr>
         <td class="strong"><a href="#f9b0c8c794ebf4f21d8e8dd0c98608fda128f1c2" class="src_link" title="spec/controllers/todolists_controller_spec.rb">spec/controllers/todolists_controller_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>132</td>
+        <td>139</td>
         <td>76</td>
         <td>76</td>
         <td>0</td>
@@ -547,7 +547,7 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>15.6</td>
+        <td>17.3</td>
       </tr>
       
       <tr>
@@ -557,7 +557,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>4.4</td>
+        <td>4.6</td>
       </tr>
       
       <tr>
@@ -607,7 +607,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>36.4</td>
+        <td>37.6</td>
       </tr>
       
       <tr>
@@ -1807,26 +1807,26 @@
           <code class="ruby">	def create</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
           
           <code class="ruby">	  @read_books = current_user.bookshelves.where(status: 2)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
           
           <code class="ruby">	  recommend = Recommended.create(user_id: current_user.id, book_id: recommend_params[:book_id])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
           <code class="ruby">	  flash[:create_recommend] = &quot;技術書「#{recommend.book.title}」をお勧めしました&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="8">
+          <span class="hits">3</span>
           
           <code class="ruby">	  render &#39;recommendeds/index.js.erb&#39;</code>
         </li>
@@ -1909,8 +1909,8 @@
           <code class="ruby">	def recommend_params</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="22">
+          <span class="hits">3</span>
           
           <code class="ruby">	  params.permit(:book_id)</code>
         </li>
@@ -8562,10 +8562,10 @@
         <div class="source_table" id="939c4cedabeb011d0c8e3e754fa5c7e2e50c846c">
   <div class="header">
     <h3>spec/controllers/bookshelves_controller_spec.rb</h3>
-    <h4><span class="yellow">87.23 %</span> covered</h4>
+    <h4><span class="yellow">88.89 %</span> covered</h4>
     <div>
-      <b>47</b> relevant lines. 
-      <span class="green"><b>41</b> lines covered</span> and
+      <b>54</b> relevant lines. 
+      <span class="green"><b>48</b> lines covered</span> and
       <span class="red"><b>6</b> lines missed.</span>
     </div>
   </div>
@@ -8801,20 +8801,20 @@
           <code class="ruby">      before do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="39">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="39">
+          <span class="hits">3</span>
           
           <code class="ruby">        @user = FactoryBot.create(:user)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="40">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="40">
+          <span class="hits">3</span>
           
           <code class="ruby">        @book = FactoryBot.create(:book)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="41">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="41">
+          <span class="hits">3</span>
           
           <code class="ruby">        @bookshelf = FactoryBot.create(:bookshelf, user_id: @user.id, book_id: @book.id)</code>
         </li>
@@ -8831,52 +8831,52 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      # it &#39;#create：本棚に本の取得できない&#39; do</code>
+          <code class="ruby">      it &#39;#create：本棚に本の取得できない&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      #   bookshelf = Bookshelf.create</code>
+          <code class="ruby">        bookshelf = Bookshelf.create</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      #   params = &#39;9784295005902&#39;</code>
+          <code class="ruby">        params = &#39;9784295005902&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      #   book = Book.new(book_code: params)</code>
+          <code class="ruby">        book = Book.new(book_code: params)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      #   bookshelf.book_id = book.id</code>
+          <code class="ruby">        bookshelf.book_id = book.id</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      #   bookshelf.save</code>
+          <code class="ruby">        bookshelf.save</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      #   expect(response).to redirect_to(new_user_session_path)</code>
+          <code class="ruby">        expect(response).to have_http_status(200)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
           
           
-          <code class="ruby">      # end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
@@ -9127,11 +9127,11 @@
         <div class="source_table" id="44db18625f5688b5050abfe14eee302b75a82f6c">
   <div class="header">
     <h3>spec/controllers/recommendeds_controller_spec.rb</h3>
-    <h4><span class="yellow">83.78 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>37</b> relevant lines. 
-      <span class="green"><b>31</b> lines covered</span> and
-      <span class="red"><b>6</b> lines missed.</span>
+      <b>44</b> relevant lines. 
+      <span class="green"><b>44</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -9345,169 +9345,169 @@
         <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(response).to redirect_to(new_user_session_path)</code>
+          <code class="ruby">        expect {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">        post :create, params: {user_id: @user.id, book_id: @book.id}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">         }.to_not change(Recommended, :count)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;#destroy：本のお勧めの解除できない&#39; do</code>
+          <code class="ruby">        expect(response).to redirect_to(new_user_session_path)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="39">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="39">
           
-          <code class="ruby">        delete :destroy, params: { id: @recommended.id }</code>
+          
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="40">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="40">
           
-          <code class="ruby">        expect {</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
-          <code class="ruby">          delete :destroy, params: { id: @recommended.id }</code>
+          <code class="ruby">      it &#39;#destroy：本のお勧めの解除できない&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">           }.to_not change(Recommended, :count)</code>
+          <code class="ruby">        delete :destroy, params: { id: @recommended.id }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(response).to redirect_to(new_user_session_path)</code>
+          <code class="ruby">        expect {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">          delete :destroy, params: { id: @recommended.id }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">           }.to_not change(Recommended, :count)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="47">
+        <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
-          <code class="ruby">    context &#39;ユーザーログイン時に他のユーザーの投稿を操作しようとする&#39; do</code>
+          <code class="ruby">        expect(response).to redirect_to(new_user_session_path)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      before do</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="49">
-          
-          
-          <code class="ruby">        @user = FactoryBot.create(:user)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="50">
-          
-          
-          <code class="ruby">        @book = FactoryBot.create(:book)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="51">
-          
-          
-          <code class="ruby">        @recommended = FactoryBot.create(:recommended, user_id: @user.id, book_id: @book.id)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="52">
-          
-          
-          <code class="ruby">        @new_user = User.new(</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="53">
-          
-          
-          <code class="ruby">          name: &#39;田中&#39;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="54">
-          
-          
-          <code class="ruby">          email: &#39;tett@test.com&#39;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby">          password: &#39;111111&#39;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="56">
-          
-          
-          <code class="ruby">        )</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="57">
-          
-          
-          <code class="ruby">        @new_user.save</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="58">
-          
-          
-          <code class="ruby">        sign_in @new_user</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &#39;ユーザーログイン時に他のユーザーの投稿を操作しようとする&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      before do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        @user = FactoryBot.create(:user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        @book = FactoryBot.create(:book)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        @recommended = FactoryBot.create(:recommended, user_id: @user.id, book_id: @book.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        @new_user = User.new(</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
           
           
-          <code class="ruby">      # it &#39;#create：本棚に本の取得できない&#39; do</code>
+          <code class="ruby">          name: &#39;田中&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">          email: &#39;tett@test.com&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">          password: &#39;111111&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">        )</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        @new_user.save</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        sign_in @new_user</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="62">
           
           
-          <code class="ruby">      # end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
@@ -9516,37 +9516,127 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="64">
+        <li class="covered" data-hits="1" data-linenumber="64">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      # it &#39;#destroy：本棚から本の削除できない&#39; do</code>
+          <code class="ruby">      it &#39;#create：本棚に本の取得できない&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="65">
+        <li class="covered" data-hits="1" data-linenumber="65">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      # end</code>
+          <code class="ruby">        post :create, params: {user_id: @user.id, book_id: @book.id}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="66">
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">        expect {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">        post :create, params: {user_id: @user.id, book_id: @book.id}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="68">
           
           
+          <code class="ruby">         }.to_not change(Recommended, :count)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="69">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="69">
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby">      # it &#39;#destroy：本棚から本の削除できない&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">      #   expect {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">      #   delete :destroy, params: { id: @recommended.id }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby">      #    }.to raise_error NameError</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby">      #   expect {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby">      #     delete :destroy, params: { id: @recommended.id }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby">      #      }.to_not change(Recommended, :count)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">      #   expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby">      # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="84">
           
           
           <code class="ruby">end</code>
@@ -10108,7 +10198,7 @@
         <li class="never" data-hits="" data-linenumber="90">
           
           
-          <code class="ruby">      #   expect(response).to have_http_status(302)</code>
+          <code class="ruby">      #   expect(response).to have_http_status(200)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="91">
@@ -10126,13 +10216,13 @@
         <li class="never" data-hits="" data-linenumber="93">
           
           
-          <code class="ruby">      # it &#39;#destroy：学習記録を削除できない&#39; do</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="94">
           
           
-          <code class="ruby">      # end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="95">
@@ -10142,24 +10232,6 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="96">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="97">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="98">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="99">
           
           
           <code class="ruby">end</code>
@@ -10943,34 +11015,76 @@
         <li class="never" data-hits="" data-linenumber="127">
           
           
-          <code class="ruby">      # end</code>
+          <code class="ruby">      #   expect {</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="128">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      #   delete :destroy, params: { id: @todolist.id, user_id: @user.id }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="129">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      #    }.to raise_error NameError</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="130">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      #   expect {</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="131">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      #     delete :destroy, params: { id: @todolist.id, user_id: @user.id }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="132">
+          
+          
+          <code class="ruby">      #   }.to_not change(Todolist, :count)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="133">
+          
+          
+          <code class="ruby">      #   expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="134">
+          
+          
+          <code class="ruby">      # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="135">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="136">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="137">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="138">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="139">
           
           
           <code class="ruby">end</code>
@@ -11807,74 +11921,74 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="4">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="4">
+          <span class="hits">20</span>
           
           <code class="ruby">    title { &quot;スラスラ読めるRubyふりがなプログラミング&quot; }</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="5">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="5">
+          <span class="hits">20</span>
           
           <code class="ruby">    url { &#39;https://books.rakuten.co.jp/rb/15819130/&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="6">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="6">
+          <span class="hits">20</span>
           
           <code class="ruby">    book_code { &#39;9784295005902&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="7">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="7">
+          <span class="hits">20</span>
           
           <code class="ruby">    sales_date { &#39;2019年03月&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="8">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="8">
+          <span class="hits">20</span>
           
           <code class="ruby">    price { &#39;2200&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="9">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="9">
+          <span class="hits">20</span>
           
           <code class="ruby">    author { &#39;高橋征義/リブロワークス&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="10">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="10">
+          <span class="hits">20</span>
           
           <code class="ruby">    caption { &#39;基本をしっかり。目指したのは「究極のやさしさ」。コードを読む力でレール（Ｒａｉｌｓ）を乗りこなそう！！登場するコードに「ふりがな」を。さらに「読み下し文」でフォロー。&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="11">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="11">
+          <span class="hits">20</span>
           
           <code class="ruby">    review_average { &#39;1.0&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="12">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="12">
+          <span class="hits">20</span>
           
           <code class="ruby">    review_count { &#39;4.1&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="13">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="13">
+          <span class="hits">20</span>
           
           <code class="ruby">    small_image_url { &#39;https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5902/9784295005902.jpg?_ex=64x64&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="14">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="14">
+          <span class="hits">20</span>
           
           <code class="ruby">    medium_image_url { &#39;https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5902/9784295005902.jpg&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="15">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="15">
+          <span class="hits">20</span>
           
           <code class="ruby">    large_image_url { &#39;https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5902/9784295005902.jpg?_ex=200x200&#39; }</code>
         </li>
@@ -11940,8 +12054,8 @@
           <code class="ruby">    book_id { 1 }</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="6">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="6">
+          <span class="hits">11</span>
           
           <code class="ruby">    status { &#39;興味がある&#39; }</code>
         </li>
@@ -12269,20 +12383,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="60" data-linenumber="4">
-          <span class="hits">60</span>
+        <li class="covered" data-hits="62" data-linenumber="4">
+          <span class="hits">62</span>
           
           <code class="ruby">    name { &#39;田中&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="60" data-linenumber="5">
-          <span class="hits">60</span>
+        <li class="covered" data-hits="62" data-linenumber="5">
+          <span class="hits">62</span>
           
           <code class="ruby">    email { &#39;t@test.com&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="60" data-linenumber="6">
-          <span class="hits">60</span>
+        <li class="covered" data-hits="62" data-linenumber="6">
+          <span class="hits">62</span>
           
           <code class="ruby">    password { &#39;111111&#39; }</code>
         </li>

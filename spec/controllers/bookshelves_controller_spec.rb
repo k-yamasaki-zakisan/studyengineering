@@ -41,14 +41,14 @@ RSpec.describe BookshelvesController, type: :controller do
         @bookshelf = FactoryBot.create(:bookshelf, user_id: @user.id, book_id: @book.id)
       end
 
-      # it '#create：本棚に本の取得できない' do
-      #   bookshelf = Bookshelf.create
-      #   params = '9784295005902'
-      #   book = Book.new(book_code: params)
-      #   bookshelf.book_id = book.id
-      #   bookshelf.save
-      #   expect(response).to redirect_to(new_user_session_path)
-      # end
+      it '#create：本棚に本の取得できない' do
+        bookshelf = Bookshelf.create
+        params = '9784295005902'
+        book = Book.new(book_code: params)
+        bookshelf.book_id = book.id
+        bookshelf.save
+        expect(response).to have_http_status(200)
+      end
 
       it '#update：本のステータス更新できない' do
         bookshelf_update_params = FactoryBot.attributes_for(:bookshelf)

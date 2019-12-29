@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :records, dependent: :destroy
   has_many :recommendeds, dependent: :destroy
   has_many :todolists, dependent: :destroy
+  has_many :snsCredentials, dependent: :destroy
 
   validates :name, :email, presence: true
 
@@ -25,7 +26,7 @@ class User < ApplicationRecord
     (limit_time.deadline - Date.today).to_i
   end
 
-  devise :omniauthable,omniauth_providers: [:google_oauth2]
+  devise :omniauthable,omniauth_providers: [:google_oauth2, :twitter]
 
   def self.find_oauth(auth)
     uid = auth.uid

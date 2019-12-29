@@ -41,6 +41,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails', '~> 5.0'
+  gem 'simplecov', :require => false
 end
 
 group :development do
@@ -59,7 +60,8 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'webdrivers'
-  gem 'simplecov'
+  gem 'simplecov', :require => false
+  gem 'rspec-rails', '~> 3.8'
   gem 'codecov', :require => false
 end
 
@@ -83,6 +85,7 @@ gem 'font-awesome-rails'
 gem 'data-confirm-modal'
 gem "omniauth"
 gem 'omniauth-google-oauth2'
+gem 'omniauth-twitter'
 
 
 
