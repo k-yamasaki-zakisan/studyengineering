@@ -32,6 +32,9 @@ RSpec.describe RecommendedsController, type: :controller do
 
       it '#create：本をお勧めできない' do
         post :create, params: {user_id: @user.id, book_id: @book.id}
+        expect {
+        post :create, params: {user_id: @user.id, book_id: @book.id}
+         }.to_not change(Recommended, :count)
         expect(response).to redirect_to(new_user_session_path)
       end
 
@@ -58,10 +61,22 @@ RSpec.describe RecommendedsController, type: :controller do
         sign_in @new_user
       end
 
-      # it '#create：本棚に本の取得できない' do
-      # end
+      it '#create：本棚に本の取得できない' do
+        post :create, params: {user_id: @user.id, book_id: @book.id}
+        expect {
+        post :create, params: {user_id: @user.id, book_id: @book.id}
+         }.to_not change(Recommended, :count)
+        expect(response).to have_http_status(200)
+      end
 
       # it '#destroy：本棚から本の削除できない' do
+      #   expect {
+      #   delete :destroy, params: { id: @recommended.id }
+      #    }.to raise_error NameError
+      #   expect {
+      #     delete :destroy, params: { id: @recommended.id }
+      #      }.to_not change(Recommended, :count)
+      #   expect(response).to have_http_status(200)
       # end
     end
   end

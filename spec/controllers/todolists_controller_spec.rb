@@ -124,6 +124,13 @@ RSpec.describe TodolistsController, type: :controller do
       # end
 
       # it '#destroy：todoの削除できない' do
+      #   expect {
+      #   delete :destroy, params: { id: @todolist.id, user_id: @user.id }
+      #    }.to raise_error NameError
+      #   expect {
+      #     delete :destroy, params: { id: @todolist.id, user_id: @user.id }
+      #   }.to_not change(Todolist, :count)
+      #   expect(response).to have_http_status(200)
       # end
 
     end

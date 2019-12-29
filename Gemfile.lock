@@ -76,6 +76,10 @@ GEM
       xpath (~> 3.2)
     chartkick (3.3.0)
     childprocess (3.0.0)
+    codecov (0.1.16)
+      json
+      simplecov
+      url
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -185,6 +189,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
+    oauth (0.5.4)
     oauth2 (1.4.2)
       faraday (>= 0.8, < 2.0)
       jwt (>= 1.0, < 3.0)
@@ -198,9 +203,15 @@ GEM
       jwt (>= 2.0)
       omniauth (>= 1.1.1)
       omniauth-oauth2 (>= 1.6)
+    omniauth-oauth (1.1.0)
+      oauth
+      omniauth (~> 1.0)
     omniauth-oauth2 (1.6.0)
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
+    omniauth-twitter (1.4.0)
+      omniauth-oauth (~> 1.1)
+      rack
     orm_adapter (0.5.0)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -338,6 +349,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)
+    url (0.3.2)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (3.7.0)
@@ -364,6 +376,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   chartkick
+  codecov
   coffee-rails (~> 4.2)
   data-confirm-modal
   devise
@@ -378,6 +391,7 @@ DEPENDENCIES
   mysql2 (>= 0.4.4, < 0.6.0)
   omniauth
   omniauth-google-oauth2
+  omniauth-twitter
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.4)

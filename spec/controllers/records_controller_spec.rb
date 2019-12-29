@@ -87,10 +87,7 @@ RSpec.describe RecordsController, type: :controller do
 
       # it '#update：学習記録を編集できない' do
       #   patch :update, params: { record: FactoryBot.attributes_for(:record), id: @record.id }
-      #   expect(response).to have_http_status(302)
-      # end
-
-      # it '#destroy：学習記録を削除できない' do
+      #   expect(response).to have_http_status(200)
       # end
 
     end

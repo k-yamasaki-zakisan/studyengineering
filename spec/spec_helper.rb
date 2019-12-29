@@ -12,8 +12,10 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
+require 'simplecov'
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  ENV['RAILS_ENV'] = 'test'
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -48,11 +50,7 @@ RSpec.configure do |config|
     SimpleCov.coverage_dir(dir)
   end
 
-  require 'simplecov'
   SimpleCov.start
-
-  require 'codecov'
-  SimpleCov.formatter = SimpleCov::Formatter::Codecov
 
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
