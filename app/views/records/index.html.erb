@@ -14,13 +14,14 @@
           <span class="input-group-addon">時間</span>
         </div>
         <div class="col-md-4">
-          <div class="new-todo-create"><%= r.submit '学習内容を報告する', class: "btn btn-warning", style: "width: 150px;" %></div>
+          <div class="new-todo-create">
+            <%= r.submit '学習内容を報告する', class: "btn btn-warning", style: "width: 150px;" %>
+          </div>
         </div>
       <% end %>
       <br>
       <div id="record_message_area" class="col-md-8">
         <%= render partial: "message" %>
-        <%= link_to "Twitterと連動する", user_twitter_omniauth_authorize_path, class: "btn btn-primary" %>
       </div>
       <div class="col-md-8">
         <% if flash[:success_record_update] %>
@@ -38,6 +39,10 @@
           </div>
         <% end %>
       </div>
+    </div>
+    <div class="col-md-4">
+      <br>
+      <%= link_to "Twitterと連動する", user_twitter_omniauth_authorize_path, class: "btn btn-primary" %>
     </div>
     <div id="records_area">
       <%= render partial: "records", locals: { records: @records } %>
