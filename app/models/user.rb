@@ -44,7 +44,7 @@ class User < ApplicationRecord
           )
       else
         user = User.create(
-          name: auth.info.name,
+          name: auth.info.email,
           email:    auth.info.email,
           password: Devise.friendly_token[0, 20],
           )
