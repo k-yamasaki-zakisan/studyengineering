@@ -5,7 +5,10 @@ services:
      volumes:
        - db-volume:/var/lib/mysql
      environment:
-      - MYSQL_ROOT_PASSWORD=password
+        MYSQL_HOST: 127.0.0.1
+        MYSQL_ROOT_PASSWORD: passward
+        MYSQL_DATABASE: myapp_development
+        MYSQL_USERNAME: root
   web:
      build: .
      command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
