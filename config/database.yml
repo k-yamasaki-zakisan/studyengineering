@@ -31,7 +31,6 @@ test:
   password: <%= ENV['DB_PASSWORD'] || 'password' %>
   host: <%= ENV['DB_HOST'] || '127.0.0.1' %>
   port: 3306
-  socket:  /var/lib/mysql/mysql.sock
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
