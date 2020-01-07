@@ -28,7 +28,7 @@ test:
   <<: *default
   database: myapp_test
   username: <%= ENV['DB_USERNAME'] || 'root' %>
-  password: <%= ENV['DB_PASSWORD'] || '' %>
+  password: <%= ENV['DB_PASSWORD'] || 'password' %>
   host: <%= ENV['DB_HOST'] || '127.0.0.1' %>
   port: 3306
   socket:  /var/lib/mysql/mysql.sock
