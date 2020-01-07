@@ -5,7 +5,7 @@ orbs:
 jobs:
   test:
     docker:
-      - image: circleci/ruby:2.5.1-node-browsers
+      - image: circleci/ruby:2.5.7-node-browsers
         environment:
           RAILS_ENV: test
       - image: circleci/mysql:5.7
