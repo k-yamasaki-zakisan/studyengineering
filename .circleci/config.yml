@@ -9,7 +9,7 @@ jobs:
       - image: circleci/ruby:2.5.7-node-browsers
         environment:
           RAILS_ENV: test
-          DB_HOST: 127.0.0.1
+          DB_HOST: '127.0.0.1'
           DB_USERNAME: root
           DB_PASSWORD: password
 
@@ -17,6 +17,11 @@ jobs:
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       - image: circleci/mysql:5.7
+        environment:
+          RAILS_ENV: test
+          DB_HOST: 127.0.0.1
+          DB_USERNAME: root
+          DB_PASSWORD: password
 
     working_directory: ~/repo
 
