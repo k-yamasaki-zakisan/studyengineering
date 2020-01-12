@@ -12,6 +12,7 @@ jobs:
           DB_HOST: 127.0.0.1
           DB_USERNAME: root
           DB_PASSWORD: password
+          MYSQL_ROOT_PASSWORD: password
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -22,6 +23,7 @@ jobs:
           DB_HOST: 127.0.0.1
           DB_USERNAME: root
           DB_PASSWORD: password
+          MYSQL_ROOT_PASSWORD: password
 
     working_directory: ~/repo
 
