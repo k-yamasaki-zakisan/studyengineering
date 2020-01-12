@@ -73,4 +73,6 @@ jobs:
       - store_artifacts:
           path: /tmp/test-results
           destination: test-results
+      - codecov/upload: # 追加
+          file: test_results/rspec.xml
 
