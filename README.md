@@ -1,4 +1,3 @@
-[![codecov](https://codecov.io/gh/kazuyoshi-tech/studyengineering/branch/master/graph/badge.svg)](https://codecov.io/gh/kazuyoshi-tech/studyengineering)
 # **作品名**
 Study Engineering
 
