@@ -12,7 +12,10 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
-
+require 'simplecov'
+SimpleCov.start
+require 'codecov'
+SimpleCov.formatter = SimpleCov::Formatter::Codecov
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   ENV['RAILS_ENV'] = 'test'
@@ -102,7 +105,3 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
-require 'simplecov'
-SimpleCov.start
-require 'codecov'
-SimpleCov.formatter = SimpleCov::Formatter::Codecov
