@@ -43,7 +43,6 @@ class UsersController < ApplicationController
           else
 	    @studytimes = current_user.records.all
 	  end
-
 	  @studychart = []
 	  @studytimes.each do |s|
 	    @studychart << [s.created_at.strftime("%Y年%-m月%-d日") , s.until_today_studytime]
