@@ -9,7 +9,7 @@ class BooksController < ApplicationController
     end
 
   　def detail
-  	  results = RakutenWebService::Books::Book.search({
+  	 results = RakutenWebService::Books::Book.search({
         isbn: bookcode_params[:book_code]
       })
       @book = Book.new(read(results.first))
