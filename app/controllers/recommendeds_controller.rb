@@ -11,9 +11,9 @@ class RecommendedsController < ApplicationController
 	def destroy
 	  @read_books = current_user.bookshelves.where(status: 2)
 	  recommend = current_user.recommendeds.find(params[:id])
-      recommend.destroy
-      flash[:destroy_recommend] = "「#{recommend.book.title}」のお勧めを解除しました"
-      render 'recommendeds/index.js.erb'
+          recommend.destroy
+          flash[:destroy_recommend] = "「#{recommend.book.title}」のお勧めを解除しました"
+          render 'recommendeds/index.js.erb'
 	end
 
 	private
