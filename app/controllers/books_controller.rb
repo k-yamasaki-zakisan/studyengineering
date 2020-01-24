@@ -13,7 +13,7 @@ class BooksController < ApplicationController
         isbn: bookcode_params[:book_code]
       })
       @book = Book.new(read(results.first))
-  end
+    end
 
     def show
       @book = Book.find(params[:id])
