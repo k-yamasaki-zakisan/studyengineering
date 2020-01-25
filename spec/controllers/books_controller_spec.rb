@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe BooksController, type: :controller do
+#RSpec.describe BooksController, type: :controller do
   #describe '正常系' do
   #  context 'ページに遷移' do
       #it '#search：遷移後にキーワードで検索　→　再びsearch遷移' do
@@ -25,17 +25,17 @@ RSpec.describe BooksController, type: :controller do
     #end
   #end
 
-  describe '異常系' do
-    context "ページ遷移できない" do
-      it "#search：遷移後に短いキーワードで検索　→　検索できない" do
-        get :search
-        expect(response).to have_http_status(200)
-        booktitle_params = 'c'
-        get :search
-        expect(response).to have_http_status(200)
-        # expect(flash[:danger]).to eq "Error: キーワードが短すぎます"
-      end
-    end
-  end
+  #describe '異常系' do
+  #  context "ページ遷移できない" do
+  #    it "#search：遷移後に短いキーワードで検索　→　検索できない" do
+  #      get :search
+  #      expect(response).to have_http_status(200)
+  #      booktitle_params = 'c'
+  #      get :search
+  #      expect(response).to have_http_status(200)
+  #      # expect(flash[:danger]).to eq "Error: キーワードが短すぎます"
+  #    end
+  #  end
+  #end
 
-end
+#end
