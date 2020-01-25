@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe BooksController, type: :controller do
-  describe '正常系' do
-    context 'ページに遷移' do
+  #describe '正常系' do
+  #  context 'ページに遷移' do
       #it '#search：遷移後にキーワードで検索　→　再びsearch遷移' do
       #  get :search
       #  expect(response).to have_http_status(200)
@@ -17,13 +17,13 @@ RSpec.describe BooksController, type: :controller do
       #   expect(response).to have_http_status(200)
       # end
 
-      it '#show：遷移' do
-      	book = FactoryBot.create(:book)
-        get :show, params: {id: book.id}
-        expect(response).to have_http_status(200)
-      end
-    end
-  end
+      #it '#show：遷移' do
+      #	book = FactoryBot.create(:book)
+      #  get :show, params: {id: book.id}
+      #  expect(response).to have_http_status(200)
+      #end
+    #end
+  #end
 
   describe '異常系' do
     context "ページ遷移できない" do
