@@ -3,13 +3,13 @@ require 'rails_helper'
 RSpec.describe BooksController, type: :controller do
   describe '正常系' do
     context 'ページに遷移' do
-      it '#search：遷移後にキーワードで検索　→　再びsearch遷移' do
-        get :search
-        expect(response).to have_http_status(200)
-        booktitle_params = 'Ruby'
-        get :search
-        expect(response).to have_http_status(200)
-      end
+      #it '#search：遷移後にキーワードで検索　→　再びsearch遷移' do
+      #  get :search
+      #  expect(response).to have_http_status(200)
+      #  booktitle_params = 'Ruby'
+      #  get :search
+      #  expect(response).to have_http_status(200)
+      #end
 
       # it '#detail：遷移' do
       # 	book_code = '9784295005902'
