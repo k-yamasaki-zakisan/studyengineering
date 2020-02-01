@@ -2,9 +2,6 @@
 # **作品名**
 Study Engineering
 
-## **URL**
-https://studyengineering2019.com
-
 ## **コンセプト**
 プログラミング学習に特化した学習管理ツール。
 Twitterとの連動機能によってフォロワーに対して学習成果の共有が可能
